@@ -1,0 +1,84 @@
+{
+    "username": "Kwvanty_",
+    "last_version": "PvpIng",
+    "theme": "dark",
+    "language": "ru",
+    "accent_idx": 4,
+    "custom_color": [
+        255,
+        95,
+        23
+    ],
+    "ram_gb": 12,
+    "ram_protection": true,
+    "launch_action": "hide",
+    "auto_backup_enabled": false,
+    "always_on_top": false,
+    "auto_disable_incompatible_mods": false,
+    "check_updates_on_start": true,
+    "sound_notifications": true,
+    "open_error_log_on_failed_launch": false,
+    "auto_start": false,
+    "interface_scale": 1.0,
+    "skin_path": "C:/Users/Work/Desktop/Kwvanty/Фоторафии/KwvantyFIX.png",
+    "favorite_versions": [
+        "Kebabij",
+        "PvpIng",
+        "AEROCRAFT v1"
+    ],
+    "grid_weights_w": [
+        0.8732758620689655,
+        1.753448275862069,
+        0.8732758620689656
+    ],
+    "grid_weights_h": [
+        0.823856209150327,
+        1.3761437908496725
+    ],
+    "detached_modules": [],
+    "module_layouts": {
+        "left": {
+            "col": 0,
+            "row": 0,
+            "span_w": 1,
+            "span_h": 1
+        },
+        "console": {
+            "col": 0,
+            "row": 1,
+            "span_w": 1,
+            "span_h": 1
+        },
+        "center": {
+            "col": 1,
+            "row": 0,
+            "span_w": 1,
+            "span_h": 2
+        },
+        "right": {
+            "col": 2,
+            "row": 1,
+            "span_w": 1,
+            "span_h": 1
+        },
+        "info": {
+            "col": 2,
+            "row": 0,
+            "span_w": 1,
+            "span_h": 1
+        }
+    },
+    "bg_mode": "preset",
+    "bg_preset": "bg-popcorn",
+    "bg_custom_path": "C:/Users/Work/Desktop/Kwvanty/Нада/peakpx.jpg",
+    "bg_pattern_color": [
+        255,
+        97,
+        26
+    ],
+    "nickname_profiles": {
+        "Kwvanty": "Version",
+        "Kwvanty_": "PvpIng"
+    },
+    "active_nickname": "Kwvanty_"
+}

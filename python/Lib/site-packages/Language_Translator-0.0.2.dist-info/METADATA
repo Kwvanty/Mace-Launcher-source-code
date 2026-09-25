@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: Language-Translator
+Version: 0.0.2
+Summary: Converting native languages to English
+Home-page: https://github.com/Nagababu91768/Language-Translator
+Author: Upputuri Nagababu
+Author-email: nagababuuupputuri@gmail.com
+License: MIT  # Example license
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: kivy
+Requires-Dist: kivymd
+Requires-Dist: googletrans (==3.1.0a0)
+
+# Language-Translator
+This Project was mainly developed for converting different native languages into the English Language along with building Android Application for this project using     buildozer tool in python.
+ 
+# Installation 
+```bash
+pip install Language_Translator
+```
+
+# Usage
+In this project all code is written in a single class and inherited other kivy and kimymd layouts and screens and it returns the layout along with the Ui for Translating text.
+```bash
+from Language_Trnaslator import main
+obj=main.ConverterApp().run()
+```
+  
+### Congratulations .... Application opens in your local system.
+  
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## More Documentation
+Please check Readme.md in Github, [click here](https://github.com/Nagababu91768/Language-Translator/edit/master/README.md)
+
+

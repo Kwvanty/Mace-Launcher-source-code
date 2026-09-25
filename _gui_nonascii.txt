@@ -1,0 +1,226 @@
+26: # Для мониторинга системы (psutil)
+33: # Для окна выбора файла и буфера обмена
+89:             print(f"Ошибка создания дефолтного фона: {e}")
+91: # Глобальные переменные
+107: logs = ["[System] Multi-window module system active.", "[System] The ↗ button opens a separate Pygame window."]
+109: # Настройки фона модулей
+131:         print(f"Ошибка загрузки конфигурации: {error}")
+135:         print("Ошибка загрузки конфигурации: корневое значение должно быть объектом")
+166:         print(f"Ошибка сохранения конфигурации: {error}")
+235: # Цветовая палитра
+274: # Шрифты
+302: # Браузер ресурс-паков
+401:         print(f"Ошибка загрузки иконки мода: {exc}")
+418:         print(f"Помилка відкриття папки {path}: {e}")
+439:     """Безопасно читает фильтры браузера, даже если словарь ещё не инициализирован."""
+486:     """Возвращает Minecraft-версию и loader ИМЕННО выбранного мод-пака.
+488:     Пример результата:
+491:     Источник истины — JSON выбранного профиля. Loader определяется как из
+492:     явных полей, так и из стандартных библиотек Fabric/Forge/NeoForge.
+499:     # Если пользователь передал уже саму Minecraft-версию.
+529:         # Последняя страховка для профилей, в названии которых есть 1.21.1.
+535:     # Версия Minecraft.
+542:     # Явные поля loader, если launcher_core их сохраняет.
+549:     # Стандартный Minecraft profile.json: ищем loader по координатам библиотек.
+567:     # Последняя страховка — определить loader по тексту JSON.
+673:     """Ищет ресурс-паки в отдельном потоке."""
+690:         print(f"[RPBrowser] Ошибка поиска: {exc}")
+704:     """Папка resourcepacks ИМЕННО выбранного мод-пака."""
+714:     """Проверяет наличие файла выбранного ресурс-пака."""
+723:         print(f"[RPBrowser] Ошибка проверки установки: {exc}")
+728:     """Скачивает ресурс-пак строго для Minecraft-версии выбранного мод-пака."""
+733:             modrinth_download_status = "Ошибка: мод-пак не выбран."
+740:                 f"Ошибка: не удалось определить Minecraft-версию мод-пака '{profile_name}'."
+745:         modrinth_download_status = f"Скачивание ресурс-пака для Minecraft {mc_version}..."
+754:             modrinth_download_status = f"Ресурс-пак установлен: {filename} ({mc_version})"
+756:                 f"[RPBrowser] Установлен '{filename}' в мод-пак '{profile_name}' "
+757:                 f"для Minecraft {mc_version}."
+761:         modrinth_download_status = f"Не удалось скачать ресурс-пак для {mc_version}."
+764:         modrinth_download_status = f"Ошибка ресурс-пака: {exc}"
+765:         print(f"[RPBrowser] Ошибка установки: {exc}")
+781:     """Скачивает мод, СТРОГО совместимый с выбранным мод-паком.
+783:     profile_name — имя папки выбранного мод-пака, а не фильтр браузера.
+784:     Сначала читаем JSON профиля и определяем Minecraft + loader, затем
+785:     запрашиваем у Modrinth только подходящие версии проекта.
+790:     modrinth_download_status = f"Проверка совместимости '{slug}'..."
+794:             modrinth_download_status = "Ошибка: мод-пак не выбран."
+801:         # loader из аргумента НЕ является источником истины. Он используется
+802:         # только как дополнительная информация, если профиль действительно
+803:         # не содержит loader.
+809:                 f"Ошибка: не удалось определить Minecraft-версию мод-пака '{profile_name}'."
+816:                 f"Ошибка: не удалось определить загрузчик мод-пака '{profile_name}'."
+825:         # Передаём Modrinth именно параметры выбранного мод-пака.
+837:             f"[ModBrowser] Установка '{slug}' для мод-пака '{profile_name}': "
+856:             modrinth_download_status = f"Ошибка: Modrinth вернул неверный ответ для {slug}."
+859:         # Дополнительная локальная проверка. Никаких fallback на data[0]!
+881:                 f"Для {slug} нет версии под {pack_version} + {pack_loader}."
+884:                 f"[ModBrowser] Нет совместимой версии: "
+889:         # Modrinth обычно отдаёт новые версии первыми. Дополнительно сортируем
+890:         # по дате публикации, чтобы выбор был предсказуемым.
+906:             modrinth_download_status = "Ошибка: у совместимой версии нет файла."
+913:             modrinth_download_status = "Ошибка: у файла Modrinth нет URL."
+916:             modrinth_download_status = f"Ошибка: найденный файл не JAR: {file_name}"
+920:             f"Скачивание {file_name} ({pack_version}, {pack_loader})..."
+937:             f"Успешно установлено: {file_name}! "
+945:             modrinth_download_status = f"Ошибка: Мод '{slug}' не найден на Modrinth."
+947:             modrinth_download_status = f"HTTP Ошибка Modrinth: {e.code}"
+951:         modrinth_download_status = f"Ошибка скачивания: {e}"
+1078:         return False, "Не указаны данные мода"
+1082:             return False, "Не удалось найти совместимую версию"
+1085:             return False, "У версии нет файлов для скачивания"
+1149:         print(f"Ошибка пиктограммы {filename}: {e}")
+1203:         print(f"Ошибка загрузки фона модуля {img_path}: {e}")
+1207:     """Отрисовка фона СТРОГО внутри прямоугольника модуля (Full screen bounds)"""
+1305:             print(f"Ошибка загрузки скина: {e}")
+1312:         print("Tkinter недоступен: выбор файла невозможен.")
+1335:         print(f"Ошибка выбора файла: {exc}")
+1348:         "Выберите скин игрока",
+1370:         "Выберите фоновое изображение",
+1493:     cpu_temp = "Н/Д"
+1501:                         cpu_temp = f"{int(entries[0].current)}°C"
+1508:     gpu_temp = "Н/Д"
+1516:             gpu_temp = f"{int(gpu.temperature)}°C"
+1523:     ram_temp = "Н/Д"
+1798:     """Возвращает все параметры ленты в одном словаре.
+1800:     Словарь намеренно используется вместо tuple-unpack, чтобы исключить
+1801:     ошибки вида "expected N, got M" при изменениях интерфейса.
+1862:     """Получает индекс прокрутки по позиции мыши на вертикальном слайдере."""
+1876:     """Возвращает индекс версии под курсором или None."""
+1884:     """Красивая вертикальная лента версий + ползунок справа."""
+1911:             mark = font_main.render("✓", True, TEXT_COLOR)
+1916:     # Вертикальный слайдер справа.
+1925:     hint = "Нажмите версию или перетащите ползунок"
+1941:         pygame.display.set_caption("Mace Launcher - Детали мода")
+1949:         status_text = "Готово"
+1955:                 return ["Описание отсутствует."]
+1977:                 wrapped = wrap_text_block(project.get("body") or project.get("description") or "Нет описания.", panel_width - 32, font_main)
+1989:                 f"Автор: {project.get('author') or 'Неизвестно'}",
+1990:                 f"Загрузок: {project.get('downloads', 0)}",
+1991:                 f"Категории: {', '.join(project.get('categories', [])[:5]) or '—'}",
+1992:                 f"Лоадеры: {', '.join(project.get('loaders', [])[:5]) or '—'}",
+1998:         desc = (project.get("description") or "Нет описания.")
+2038:                                 print(f"Ошибка установки мода: {msg}")
+2040:                                 print(f"Мод {slug} успешно обновлён: {msg}")
+2042:                         status_text = "Загрузка запущена..."
+2074:                 version_name = active_version.get("name") or active_version.get("version_number") or "новая версия"
+2075:                 info_surf = font_small.render(f"Последняя: {version_name}", True, (110, 210, 140))
+2082:                     'info': 'Описание',
+2083:                     'versions': 'Версии',
+2084:                     'dependencies': 'Зависимости',
+2085:                     'details': 'Инфо',
+2106:                         name = item.get("name") or item.get("version_number") or "Версия"
+2110:                         label = f"• {name}  ({summary})"
+2122:                         surf = font_main.render(f"• {dep_type}: {dep_name}", True, (245, 245, 250))
+2130:                     f"Автор: {project.get('author') or 'Неизвестно'}",
+2131:                     f"Загрузок: {project.get('downloads', 0)}",
+2132:                     f"Категории: {', '.join(project.get('categories', [])[:5]) or '—'}",
+2133:                     f"Лоадеры: {', '.join(project.get('loaders', [])[:5]) or '—'}",
+2152:             btn_text = font_main.render("Обновить мод", True, (245, 245, 250))
+2162:         print(f"Ошибка окна мода: {exc}")
+2167:     """Отдельное окно для отображения содержимого конкретного модуля.
+2169:     В отличие от простого заглушечного экрана, здесь рендерятся данные,
+2170:     характерные для нужного блока интерфейса: профиль, системная информация,
+2171:     консоль логов, превью скина и содержимое мод-брозера.
+2283:                 name = globals().get("username", "Введите имя")
+2294:                 screen.blit(font_main.render(f"Версия: {ver if ver else 'не выбрана'}", True, gray), (inner.x + 100, inner.y + 64))
+2295:                 screen.blit(font_main.render(f"Статус: {status_text}", True, status_color), (inner.x + 100, inner.y + 90))
+2300:                 screen.blit(font_small.render("Память / загрузка", True, gray), (inner.x + 18, inner.y + 118))
+2302:                 screen.blit(font_main.render("Последний вход: сегодня", True, gray), (inner.x + 18, inner.y + 188))
+2355:         print(f"Ошибка detached модуля '{module_id}': {exc}")
+2363:         pygame.display.set_caption("Mace Launcher - Створення нової версії")
+2400:             # При уменьшении окна сохраняем интервалы, не допуская налезания.
+2577:         print(f"Помилка у вікні створення версії: {e}")
+2589:     "update_version": "Обновить версию",
+2590:     "update_client": "Обновить клиент",
+2591:     "update_jar": "Обновить JAR",
+2592:     "backup": "Сделать бэкап",
+2593:     "restore": "Восстановить версию",
+2594:     "delete": "Удалить мод-пак",
+2605:     """Отдельное маленькое Pygame-окно с обязательным подтверждением опасного действия."""
+2609:         pygame.display.set_caption("Mace Launcher - Подтверждение действия")
+2664:     """Запускает отдельное окно подтверждения и возвращает True/False."""
+2686:     """Отдельное окно Pygame для управления выбранным модпаком."""
+2690:         pygame.display.set_caption(f"Mace Launcher - Редактирование версии [{version_name}]")
+2733:                     set_status("Целевая версия совпадает с текущей.", danger=True)
+2735:                 if not ask_version_confirmation(theme, action_key, version_name, f"Обновить Minecraft до {target_version}"):
+2736:                     set_status("Действие отменено.")
+2741:                 if not ask_version_confirmation(theme, action_key, version_name, "Старый клиент будет полностью удалён и установлен заново"):
+2742:                     set_status("Действие отменено.")
+2747:                 if not ask_version_confirmation(theme, action_key, version_name, "Будет заменён только файл .jar"):
+2748:                     set_status("Действие отменено.")
+2753:                 if not ask_version_confirmation(theme, action_key, version_name, "Будет создана полная копия папки версии"):
+2754:                     set_status("Действие отменено.")
+2761:                     set_status("Бэкап этой версии не найден в vBackups.", danger=True)
+2763:                 if not ask_version_confirmation(theme, action_key, version_name, "Файлы текущей версии будут заменены бэкапом"):
+2764:                     set_status("Действие отменено.")
+2769:                 if not ask_version_confirmation(theme, action_key, version_name, "Папка мод-пака будет удалена без возможности отмены"):
+2770:                     set_status("Действие отменено.")
+2951:         print(f"Ошибка редактора версии: {e}")
+3043:     center_active_tab = "news"     # Вкладки внутри модуля "Новости и модпаки": "news", "modpacks", "browser"[cite: 1]
+3102:             print(f"Не удалось восстановить процесс {m_id}: {e}")
+3117:                 add_log("[System] Игра завершена. Лаунчер перезапущен.")
+3179:                 add_log(f"[UI] Отдельное окно модуля '{m_id}' закрыто, возвращен на сетку.")
+3505:                         add_log("[UI] Скопирован лог консоли.")
+3518:                     add_log(f"[Folders] Відкрито головну папку Minecraft: {MINECRAFT_DIR}")
+3526:                     add_log(f"[Folders] Відкрито папку модпака/версії: {cur_ver}")
+3529:                     add_log("[UI] Відкрито вікно створення нової версії.")
+3537:                     add_log(f"[UI] Відкрито редактор версії: {cur_ver}")
+3552:                     add_log("[UI] Редактор версии закрыт. Список версий обновлён.")
+3563:                                 add_log(f"[UI] Модуль '{mod_id}' возвращен на сетку.")
+3578:                                 add_log(f"[UI] Модуль '{mod_id}' открыт в отдельном окне.")
+3585:                     # Проверка кликов по центру: Новости / Модпаки / Моды / Ресурс-паки
+3635:                                 add_log("[UI] Открытие окна фильтров модов.")
+3685:                                                     add_log("[RPBrowser] Сначала выберите мод-пак.")
+3687:                                                     add_log(f"[RPBrowser] Не удалось определить Minecraft-версию мод-пака '{cur_ver}'.")
+3690:                                                         add_log(f"[RPBrowser] Ресурс-пак {project_id} уже установлен.")
+3713:                                                         add_log(f"[ModBrowser] Мод {slug} уже установлен.")
+3717:                                                             f"[ModBrowser] Установка {slug} в мод-пак '{target_profile}': "
+3907:                             add_log("[Skin] Сброшен скин на стандартный.")
+3938:                             add_log(f"[UI] Старт сессии {cur_ver} с RAM: {ram_gb}GB...")
+3956:                                     add_log("[System] Игра завершена. Лаунчер перезапущен.")
+3958:                                 add_log(f"[ERROR] Ошибка запуска: {e}")
+3984:                         modrinth_download_status = "Названия модов скопированы!"
+4003:                                     print(f"Помилка видалення: {e}")
+4012:                                     print(f"Помилка перейменування: {e}")
+4049:                         add_log("[System] Настройки применены.")
+4066:                         add_log("[System] Отменено.")
+4259:                             screen.blit(font_small.render("↙", True, TEXT_COLOR), (d_btn.x + 8, d_btn.y + 6))
+4261:                         det_surf = font_main.render(f"Модуль [{mod_id.upper()}] в окне", True, GRAY_TEXT)
+4287:                         screen.blit(font_small.render("↗", True, TEXT_COLOR), (d_btn.x + 8, d_btn.y + 6))
+4318:                     screen.blit(font_small.render("КОНСОЛЬ СИСТЕМЫ", True, GRAY_TEXT), (p_rect.x + 15, p_rect.y + 12))
+4331:                     screen.blit(font_small.render("Копировать", True, TEXT_COLOR), (copy_btn.x + 8, copy_btn.y + 5))
+4341:                         log_surf = font_console.render(line_text, True, CONSOLE_TEXT if "Ошибка" not in line_text.lower() and "не" not in line_text.lower() else (255, 180, 180))
+4353:                     screen.blit(font_small.render("НОВОСТИ И МОДПАКИ", True, GRAY_TEXT), (p_rect.x + 15, p_rect.y + 12))
+4355:                     # Отрисовка вкладок внутри центрального модуля
+4367:                     draw_tab_btn(tab_news_rect, "Новости", center_active_tab == "news")
+4368:                     draw_tab_btn(tab_packs_rect, "Модпаки", center_active_tab == "modpacks")
+4369:                     draw_tab_btn(tab_browser_rect, "Моды", center_active_tab == "browser")
+4370:                     draw_tab_btn(tab_rp_rect, "Ресурс-паки", center_active_tab == "resourcepacks")
+4377:                         center_msg = font_subtitle.render("[ Сборки и новости загружены ]", True, TEXT_COLOR)
+4379:                         sub_c_msg = font_main.render("Используйте выпадающий список для выбора версии.", True, GRAY_TEXT)
+4382:                         center_msg = font_subtitle.render("[ Установленные модпаки ]", True, TEXT_COLOR)
+4384:                         sub_c_msg = font_main.render(f"Активная сборка: {cur_ver if cur_ver else 'Не выбрана'}", True, SUCCESS_COLOR)
+4402:                         placeholder = "Введите название ресурс-пака..." if is_rp else "Введите название мода..."
+4403:                         action_title = "Поиск" if is_rp else "Фильтры"
+4427:                         info_text = f"Выбранный мод-пак: {cur_ver or 'не выбран'} | Minecraft: {target_mc or 'не определена'}"
+4435:                             empty_text = "Выберите мод-пак" if is_rp and not cur_ver else (f"Нет ресурс-паков для {target_mc}" if is_rp and target_mc else "Введите запрос или нажмите Фильтры")
+4450:                                 desc = item.get("description") or "Без описания"
+4466:                                     label = "Установлен"
+4469:                                     label = "Установить"
+4529:             arrow_str = "▲" if dropdown_open else "▼"
+4594:             screen.blit(font_main.render(f"← {tr('back')}", True, TEXT_COLOR), (mods_back_btn.x + 18, mods_back_btn.y + 9))
+4636:                     toggle_text = "Включить" if is_disabled else "Отключить"
+4643:                     screen.blit(font_small.render("Удалить", True, TEXT_COLOR), (del_btn.centerx - 22, del_btn.centery - 6))
+4659:             screen.blit(font_main.render(f"← {tr('back')}", True, TEXT_COLOR), (settings_back_btn.x + 18, settings_back_btn.y + 9))
+4694:                 prot_txt = "Защита RAM: ВКЛ" if temp_ram_protection else "Защита RAM: ВЫКЛ"
+4699:                 act_label = LAUNCH_ACTION_LABELS.get(temp_launch_action, "Закрывать лаунчер")
+4704:                 backup_label = "ВКЛ" if temp_auto_backup_enabled else "ВЫКЛ"
+4734:                 screen.blit(font_small.render("🎨", True, TEXT_COLOR), (custom_btn_rect.centerx - 7, custom_btn_rect.centery - 7))
+4752:                 # --- Вибір кольору узора фону ---
+4769:                 # --- Випадаючий пікер кольору (якщо відкритий) ---
+4771:                     # Змістимо його нижче або зробимо так, щоб він не перекривав узори, 
+4772:                     # або перевіримо чи заданий правильно PICKER_SIZE
+4775:                         settings_content_rect.y + 410,  # Опустили нижче узорів (було 230)
+4784:                 # --- Кнопка редагування сітки ---
+4785:                 # Теж опускаємо нижче, щоб вона не зливалася з пікером
+4795:                 screen.blit(font_main.render(f"⚙ {tr('edit_grid')}", True, TEXT_COLOR), (toggle_edit_layout_btn.centerx - 110, toggle_edit_layout_btn.centery - 7))
